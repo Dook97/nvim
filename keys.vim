@@ -21,6 +21,19 @@ inoremap " ""<Esc>i
 inoremap ' ''<Esc>i
 inoremap ` ``<Esc>i
 
+" easy windows
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap ´ <C-w>+
+nnoremap = <C-w>-
+nnoremap í <C-w>>
+nnoremap é <C-w><
+
+" easy tabs
+nnoremap <c-i> gt
+
 " built in terminal escape to normal mode
 tnoremap <C-x> <C-\><C-N>
 
@@ -38,9 +51,3 @@ map <leader>s :!clear && shellcheck -x %<CR>
 
 " Compile document, be it groff/LaTeX/markdown/etc.
 map <leader>c :w! \| !compiler "<c-r>%"<CR>
-
-" Runs a script that cleans out tex build files whenever I close out of a .tex file.
-autocmd VimLeave *.tex !texclear %
-
-" Save file as sudo on files that require root permission
-cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
