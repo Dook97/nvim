@@ -12,6 +12,7 @@ call plug#end()
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeAutoDeleteBuffer = 1
+hi CursorLine cterm=None gui=None ctermbg=DarkGrey guibg=DarkGrey
 
 " lightline
 let g:lightline = { 'colorscheme' : 'powerline' }

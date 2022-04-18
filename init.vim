@@ -3,7 +3,6 @@ let mapleader=","
 source ~/.config/nvim/plugins-conf.vim
 source ~/.config/nvim/keys.vim
 
-" self-explanatory
 syntax enable
 set smartindent
 set autoindent
@@ -14,8 +13,7 @@ set fileencoding=utf-8
 set tabstop=4
 set shiftwidth=4
 
-" no. of lines from top/bottom where the viewport will move to avoid cursor
-" going that high
+" reserved number of lines from top and bottom of viewport
 set scrolloff=1
 
 " unncessary since were using lightline plugin
