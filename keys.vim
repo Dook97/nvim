@@ -32,7 +32,8 @@ nnoremap í <C-w>>
 nnoremap é <C-w><
 
 " easy tabs
-nnoremap <c-i> gt
+nnoremap <C-i> gt
+nnoremap <C-t> :tabe<CR>
 
 " built in terminal escape to normal mode
 tnoremap <C-x> <C-\><C-N>

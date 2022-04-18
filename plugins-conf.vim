@@ -14,4 +14,7 @@ let NERDTreeDirArrows = 1
 let NERDTreeAutoDeleteBuffer = 1
 
 " lightline
-let g:lightline = { 'colorscheme' : 'powerline' }
+let g:lightline = { 'colorscheme' : 'powerline_transparent' }
+let g:lightline.tabline = { 'left' : [[ 'tabs' ]], 'right' : [[ ]]}
+let g:lightline.tabline_separator    = { 'left': '', 'right': '' }
+let g:lightline.tabline_subseparator = { 'left': '', 'right': '' }
