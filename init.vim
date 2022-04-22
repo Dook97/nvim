@@ -15,10 +15,6 @@ set noruler
 set noshowmode
 set noshowcmd
 
-" make tab 4 spaces wide
-set tabstop=4
-set shiftwidth=4
-
 " reserved number of lines from top and bottom of viewport
 set scrolloff=1
 
@@ -28,10 +24,11 @@ set splitbelow splitright
 " hybrid numbers - relative in normal mode, absolute in insert mode
 " if you experience lag you might want to disable the autogroup part of this
 set nu
+set rnu
 augroup numbertoggle
 	au!
-	au InsertLeave,WinEnter * if &nu | set rnu   | endif
-	au InsertEnter,WinLeave * if &nu | set nornu | endif
+	au BufEnter,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+	au BufLeave,InsertEnter,WinLeave * if &nu                  | set nornu | endif
 augroup END
 
 " disables numbers in terminal mode
