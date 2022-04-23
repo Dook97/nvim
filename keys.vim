@@ -4,9 +4,15 @@ nnoremap <C-s> :w<CR>
 " Alternate way to quit
 nnoremap <C-q> :q!<CR>
 
+" Chop line into shorter lines
+nnoremap Q gqq
+
 " Better tabbing
 vnoremap < <gv
 vnoremap > >gv
+
+" Easy scrolling
+nnoremap <C-x> <C-e>
 
 " wrap selection
 vnoremap ( c()<Esc>hp
@@ -21,15 +27,21 @@ inoremap " ""<Esc>i
 inoremap ' ''<Esc>i
 inoremap ` ``<Esc>i
 
-" easy windows
+" easy moving between windows
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+" resize window
 nnoremap ´ <C-w>+
 nnoremap = <C-w>-
 nnoremap í <C-w>>
 nnoremap é <C-w><
+" split to empty file
+nnoremap <C-w>s <C-w>n
+nnoremap <C-w><C-s> <C-w>n
+nnoremap <C-w>v :vnew<CR>
+nnoremap <C-w><C-v> :vnew<CR>
 
 " easy tabs
 nnoremap <C-i> gt

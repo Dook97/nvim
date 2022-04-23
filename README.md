@@ -1,4 +1,4 @@
-# Lightweight Neovim config
+# Lightweight & Transparent Neovim config
 
 ## About
 

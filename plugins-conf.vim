@@ -12,9 +12,12 @@ call plug#end()
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeShowHidden=1
+let NERDTreeCascadeSingleChildDir=0
+let NERDTreeCascadeOpenSingleChildDir=0
 
 " lightline
 let g:lightline = { 'colorscheme' : 'powerline_transparent' }
-let g:lightline.tabline = { 'left' : [[ 'tabs' ]], 'right' : [[ ]]}
+let g:lightline.tabline = { 'left' : [[ 'tabs' ]], 'right' : [[ ]] }
 let g:lightline.tabline_separator    = { 'left': '', 'right': '' }
 let g:lightline.tabline_subseparator = { 'left': '', 'right': '' }
