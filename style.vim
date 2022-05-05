@@ -1,16 +1,16 @@
 " number colors for (in)active windows
-hi inactive ctermfg=241
-hi active ctermfg=81
+hi inactive ctermfg=242
+hi active ctermfg=Magenta
 
 " set initial
-hi LineNr ctermfg=81
-hi LineNrAbove ctermfg=81
-hi LineNrBelow ctermfg=81
+hi LineNr ctermfg=Magenta
+hi LineNrAbove ctermfg=Magenta
+hi LineNrBelow ctermfg=Magenta
 
 " highlight current line
 set cursorline
 hi CursorLine cterm=None ctermbg=239
-hi CursorLineNr cterm=None ctermfg=148
+hi CursorLineNr cterm=None ctermfg=Yellow
 
 " remove line highlighting on defocus
 augroup linetoggle

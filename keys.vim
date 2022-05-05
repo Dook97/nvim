@@ -1,8 +1,8 @@
 " Alternate way to save
-nnoremap <C-s> :w<CR>
+nnoremap <leader>w :up<CR>
 
 " Alternate way to quit
-nnoremap <C-q> :q!<CR>
+nnoremap <leader>q :q!<CR>
 
 " Chop line into shorter lines
 nnoremap Q gqq
@@ -13,6 +13,7 @@ vnoremap > >gv
 
 " Easy scrolling
 nnoremap <C-x> <C-e>
+nnoremap <C-z> <C-y>
 
 " wrap selection
 vnoremap ( c()<Esc>hp
@@ -33,10 +34,10 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 " resize window
-nnoremap ´ <C-w>+
-nnoremap = <C-w>-
-nnoremap í <C-w>>
-nnoremap é <C-w><
+nnoremap = <C-w>+
+nnoremap - <C-w>-
+nnoremap ; <C-w>>
+nnoremap ' <C-w><
 " split to empty file
 nnoremap <C-w>s <C-w>n
 nnoremap <C-w><C-s> <C-w>n
@@ -44,23 +45,21 @@ nnoremap <C-w>v :vnew<CR>
 nnoremap <C-w><C-v> :vnew<CR>
 
 " easy tabs
-nnoremap <C-i> gt
+nnoremap <leader>a gt
 nnoremap <C-t> :tabe<CR>
 
 " built in terminal escape to normal mode
 tnoremap <C-x> <C-\><C-N>
 
 " copy to system clipboard
-vnoremap Y "+y
+map Y "+y
+nnoremap YY "+yy
 
 " no-highlight shortcut
-nnoremap ů :noh<CR>
+nnoremap <leader>h :noh<CR>
 
 " Nerd tree
 map <leader>n :NERDTreeToggle<CR>
 
 " Check file in shellcheck:
 map <leader>s :!clear && shellcheck -x %<CR>
-
-" Compile document, be it groff/LaTeX/markdown/etc.
-map <leader>c :w! \| !compiler "<c-r>%"<CR>
