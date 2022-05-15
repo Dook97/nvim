@@ -13,7 +13,7 @@ set noshowmode
 " reserved number of lines from top and bottom of viewport
 set scrolloff=1
 
-" Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
+" Splits open at the bottom and right
 set splitbelow splitright
 
 " lazy redraw - screen will not be redrawn while executing macros etc

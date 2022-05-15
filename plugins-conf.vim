@@ -4,7 +4,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'tpope/vim-surround'
 	Plug 'preservim/nerdtree'
 	Plug 'itchyny/lightline.vim'
-	"Plug 'tpope/vim-commentary'
+	Plug 'tpope/vim-commentary'
 	Plug 'ap/vim-css-color'
 call plug#end()
 

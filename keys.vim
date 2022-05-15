@@ -58,6 +58,9 @@ nnoremap YY "+yy
 " no-highlight shortcut
 nnoremap <leader>h :noh<CR>
 
+" easier (un)commenting
+map <leader>c :Commentary<CR>
+
 " Nerd tree
 map <leader>n :NERDTreeToggle<CR>
 
