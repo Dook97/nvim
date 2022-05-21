@@ -20,7 +20,7 @@ vnoremap ( c()<Esc>hp
 vnoremap { c{}<Esc>hp
 vnoremap [ c[]<Esc>hp
 
-" auto-close
+" auto-close inoremap ( ()<Esc>i
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
 inoremap { {}<Esc>i
@@ -33,20 +33,22 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+
 " resize window
 nnoremap = <C-w>+
 nnoremap - <C-w>-
 nnoremap ; <C-w>>
 nnoremap ' <C-w><
-" split to empty file
-nnoremap <C-w>s <C-w>n
+
+" split to empty buffer
+noremap <C-w>s <C-w>n
 nnoremap <C-w><C-s> <C-w>n
 nnoremap <C-w>v :vnew<CR>
 nnoremap <C-w><C-v> :vnew<CR>
 
 " easy tabs
 nnoremap <leader>a gt
-nnoremap <C-t> :tabe<CR>
+nnoremap <leader>t :tabe<CR>
 
 " built in terminal escape to normal mode
 tnoremap <C-x> <C-\><C-N>
@@ -58,7 +60,7 @@ nnoremap YY "+yy
 " no-highlight shortcut
 nnoremap <leader>h :noh<CR>
 
-" easier (un)commenting
+" easier (un)commenting with vim-commentary
 map <leader>c :Commentary<CR>
 
 " Nerd tree

@@ -27,8 +27,8 @@ set laststatus=1
 set nu rnu
 augroup numbertoggle
 	au!
-	au BufEnter,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
-	au BufLeave,InsertEnter,WinLeave * if &nu                  | set nornu | endif
+	au BufEnter,InsertLeave,WinEnter,FocusGained * if &nu && mode() != "i" | set rnu   | endif
+	au BufLeave,InsertEnter,WinLeave,FocusLost   * if &nu                  | set nornu | endif
 	au TermOpen * setlocal nonu nornu
 augroup END
 

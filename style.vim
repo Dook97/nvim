@@ -17,8 +17,8 @@ augroup linetoggle
 	au!
 	au BufEnter,InsertEnter * set winhl=LineNr:active
 	au BufLeave,InsertLeave * set winhl=LineNr:inactive
-	au BufEnter,WinEnter * setlocal cursorline | set winhl=LineNr:active
-	au BufLeave,WinLeave * setlocal nocursorline | set winhl=LineNr:inactive
+	au BufEnter,WinEnter,FocusGained * setlocal cursorline | set winhl=LineNr:active
+	au BufLeave,WinLeave,FocusLost   * setlocal nocursorline | set winhl=LineNr:inactive
 augroup END
 
 " hide vertical split line and end-of-buffer tildes
