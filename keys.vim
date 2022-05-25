@@ -3,24 +3,26 @@ nnoremap <leader>w :up<CR>
 
 " Alternate way to quit
 nnoremap <leader>q :q!<CR>
+nnoremap <leader>Q :qa!<CR>
 
 " Chop line into shorter lines
 nnoremap Q gqq
+vnoremap Q gq
 
 " Better tabbing
 vnoremap < <gv
 vnoremap > >gv
 
 " Easy scrolling
-nnoremap <C-x> <C-e>
-nnoremap <C-z> <C-y>
+map <C-x> <C-e>
+map <C-z> <C-y>
 
 " wrap selection
 vnoremap ( c()<Esc>hp
 vnoremap { c{}<Esc>hp
 vnoremap [ c[]<Esc>hp
 
-" auto-close inoremap ( ()<Esc>i
+" parens auto-close
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
 inoremap { {}<Esc>i
@@ -41,7 +43,7 @@ nnoremap ; <C-w>>
 nnoremap ' <C-w><
 
 " split to empty buffer
-noremap <C-w>s <C-w>n
+noremap  <C-w>s <C-w>n
 nnoremap <C-w><C-s> <C-w>n
 nnoremap <C-w>v :vnew<CR>
 nnoremap <C-w><C-v> :vnew<CR>
@@ -64,7 +66,10 @@ nnoremap <leader>h :noh<CR>
 map <leader>c :Commentary<CR>
 
 " Nerd tree
-map <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
 
 " Check file in shellcheck:
-map <leader>s :!clear && shellcheck -x %<CR>
+nnoremap <leader>s :!clear && shellcheck -x %<CR>
+
+" Compile latex document
+nnoremap <leader>l :!pdflatex %<CR>
