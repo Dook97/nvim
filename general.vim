@@ -19,9 +19,6 @@ set splitbelow splitright
 " lazy redraw - screen will not be redrawn while executing macros etc
 set lz
 
-" only show status line if there's more than one window
-set laststatus=1
-
 " hybrid numbers - relative in normal mode, absolute in insert mode
 " if you experience lag you might want to disable the autogroup part of this
 set nu rnu
@@ -45,7 +42,6 @@ cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 au BufWritePre * let currPos = getpos(".")
 au BufWritePre * %s/\s\+$//e
 au BufWritePre * %s/\n\+\%$//e
-au BufWritePre *.[ch] %s/\%$/\r/e
 au BufWritePre * cal cursor(currPos[1], currPos[2])
 
 " auto source when writing to init.vim alternatively you can run :source $MYVIMRC

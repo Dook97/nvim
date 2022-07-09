@@ -14,8 +14,10 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Easy scrolling
-map <C-x> <C-e>
-map <C-z> <C-y>
+noremap <C-x> <C-e>
+noremap <C-z> <C-y>
+
+noremap <C-e> <C-x>
 
 " wrap selection
 vnoremap ( c()<Esc>hp
@@ -39,8 +41,8 @@ nnoremap <C-l> <C-w>l
 " resize window
 nnoremap = <C-w>+
 nnoremap - <C-w>-
-nnoremap ; <C-w>>
-nnoremap ' <C-w><
+nnoremap \ <C-w><
+nnoremap ' <C-w>>
 
 " split to empty buffer
 noremap  <C-w>s <C-w>n
@@ -56,14 +58,14 @@ nnoremap <leader>t :tabe<CR>
 tnoremap <C-x> <C-\><C-N>
 
 " copy to system clipboard
-map Y "+y
+noremap Y "+y
 nnoremap YY "+yy
 
 " no-highlight shortcut
 nnoremap <leader>h :noh<CR>
 
 " easier (un)commenting with vim-commentary
-map <leader>c :Commentary<CR>
+noremap <leader>c :Commentary<CR>
 
 " Nerd tree
 nnoremap <leader>n :NERDTreeToggle<CR>
