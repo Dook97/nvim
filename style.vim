@@ -26,3 +26,6 @@ hi VertSplit ctermfg=None ctermbg=None cterm=None
 hi StatusLine ctermfg=None ctermbg=None cterm=None
 hi StatusLineNC ctermfg=None ctermbg=None cterm=None
 set fillchars+=vert:\ ,eob:\ ,
+
+" hack to put cursor at the beggining of a tab instead of the end
+set list lcs=tab:\ \ ,
