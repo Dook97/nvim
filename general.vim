@@ -20,7 +20,6 @@ set splitbelow splitright
 set lz
 
 " hybrid numbers - relative in normal mode, absolute in insert mode
-" if you experience lag you might want to disable the autogroup part of this
 set nu rnu
 augroup numbertoggle
 	au!

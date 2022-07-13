@@ -1,13 +1,16 @@
 " you need to have the Plug plugin manager installed
 " use :PlugInstall to download these
 call plug#begin('~/.config/nvim/plugged')
-	Plug 'tpope/vim-surround'
-	Plug 'preservim/nerdtree'
-	Plug 'itchyny/lightline.vim'
-	Plug 'tpope/vim-commentary'
-	Plug 'ap/vim-css-color'
-	Plug 'unblevable/quick-scope'
-	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+	Plug 'tpope/vim-surround'	" super useful to (un)surround stuff
+	Plug 'preservim/nerdtree'	" integrated file manager
+	Plug 'itchyny/lightline.vim'	" statusline plugin
+	Plug 'tpope/vim-commentary'	" comment stuff
+	Plug 'ap/vim-css-color'	" show colors in css files
+	Plug 'unblevable/quick-scope'	" easier f/F navigation
+	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}	" syntax highlighting
+	Plug 'tpope/vim-repeat'	" enables . command for some plugins
+	Plug 'glts/vim-magnum'	" library needed for vim-radical
+	Plug 'glts/vim-radical'	" number conversions
 call plug#end()
 
 " nerdtree
@@ -25,8 +28,8 @@ let g:lightline.tabline_separator    = { 'left': '', 'right': '' }
 let g:lightline.tabline_subseparator = { 'left': '', 'right': '' }
 
 " quick-scope
-highlight QuickScopePrimary   cterm=reverse
-highlight QuickScopeSecondary cterm=reverse
+hi QuickScopePrimary   cterm=reverse
+hi QuickScopeSecondary cterm=reverse
 let g:qs_highlight_on_keys = ['f', 'F']
 
 " tree-sitter syntax highlighting
@@ -34,7 +37,8 @@ lua << EOF
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
   ensure_installed = {
-	  "c", "cpp", "go", "javascript", "json", "latex", "markdown", "python", "typescript", "lua"
+	  "c", "cpp", "go", "javascript", "json", "latex", "python",
+	  "typescript", "lua"
   },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)

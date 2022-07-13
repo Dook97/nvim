@@ -17,8 +17,6 @@ vnoremap > >gv
 noremap <C-x> <C-e>
 noremap <C-z> <C-y>
 
-noremap <C-e> <C-x>
-
 " wrap selection
 vnoremap ( c()<Esc>hp
 vnoremap { c{}<Esc>hp
@@ -64,9 +62,6 @@ nnoremap YY "+yy
 " no-highlight shortcut
 nnoremap <leader>h :noh<CR>
 
-" easier (un)commenting with vim-commentary
-noremap <leader>c :Commentary<CR>
-
 " Nerd tree
 nnoremap <leader>n :NERDTreeToggle<CR>
 
@@ -75,3 +70,9 @@ nnoremap <leader>s :!clear && shellcheck -x %<CR>
 
 " Compile latex document
 nnoremap <leader>l :!pdflatex %<CR>
+
+" add/remove empty lines above/below cursor
+nnoremap <silent><leader>] :set paste<CR>m`o<Esc>``:set nopaste<CR>
+nnoremap <silent><leader>[ :set paste<CR>m`O<Esc>``:set nopaste<CR>
+nnoremap <silent><leader>} m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
+nnoremap <silent><leader>{ m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
