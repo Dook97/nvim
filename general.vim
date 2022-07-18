@@ -1,9 +1,4 @@
-let mapleader=" "
-
-syntax enable
 set smartindent
-set autoindent
-set encoding=utf-8
 set fileencoding=utf-8
 
 " unncessary since were using lightline plugin
@@ -18,6 +13,9 @@ set splitbelow splitright
 
 " lazy redraw - screen will not be redrawn while executing macros etc
 set lz
+
+" no mouse
+set mouse=""
 
 " hybrid numbers - relative in normal mode, absolute in insert mode
 set nu rnu
@@ -42,6 +40,3 @@ au BufWritePre * let currPos = getpos(".")
 au BufWritePre * %s/\s\+$//e
 au BufWritePre * %s/\n\+\%$//e
 au BufWritePre * cal cursor(currPos[1], currPos[2])
-
-" auto source when writing to init.vim alternatively you can run :source $MYVIMRC
-au! BufWritePost $MYVIMRC source %

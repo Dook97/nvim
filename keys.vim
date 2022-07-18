@@ -1,3 +1,5 @@
+let mapleader=" "
+
 " Alternate way to save
 nnoremap <leader>w :up<CR>
 
@@ -70,6 +72,9 @@ nnoremap <leader>s :!clear && shellcheck -x %<CR>
 
 " Compile latex document
 nnoremap <leader>l :!pdflatex %<CR>
+
+" slightly easier commenting
+noremap <leader>c :Commentary<CR>
 
 " add/remove empty lines above/below cursor
 nnoremap <silent><leader>] :set paste<CR>m`o<Esc>``:set nopaste<CR>
