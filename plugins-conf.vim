@@ -110,5 +110,7 @@ require"nvim-treesitter.highlight".set_custom_captures {
 	["parameter"] = "Normal",
 	["property"]  = "Normal",
 	["operator"]  = "Normal",
+	["function"]  = "Normal",
+	["method"]    = "Normal",
 }
 EOF

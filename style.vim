@@ -21,6 +21,9 @@ augroup linetoggle
 	au BufLeave,WinLeave,FocusLost   * setlocal nocursorline | set winhl=LineNr:inactive
 augroup END
 
+" only show statusline when theres more than one window
+set laststatus=1
+
 " hide vertical split line and end-of-buffer tildes
 hi VertSplit    ctermfg=240  ctermbg=None cterm=None
 hi StatusLine   ctermfg=None ctermbg=None cterm=None
@@ -29,3 +32,10 @@ set fillchars+=eob:\ ,
 
 " hack to put cursor at the beggining of a tab instead of the end
 set list lcs=tab:\ \ ,
+
+" display tabs 4 characters wide
+set tabstop=4
+set shiftwidth=4
+
+" ...with some exceptions
+au FileType c,vim setlocal tabstop=8 shiftwidth=8

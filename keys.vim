@@ -19,11 +19,6 @@ vnoremap > >gv
 noremap <C-x> <C-e>
 noremap <C-z> <C-y>
 
-" wrap selection
-vnoremap ( c()<Esc>hp
-vnoremap { c{}<Esc>hp
-vnoremap [ c[]<Esc>hp
-
 " parens auto-close
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i

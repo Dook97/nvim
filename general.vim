@@ -40,3 +40,6 @@ au BufWritePre * let currPos = getpos(".")
 au BufWritePre * %s/\s\+$//e
 au BufWritePre * %s/\n\+\%$//e
 au BufWritePre * cal cursor(currPos[1], currPos[2])
+
+" dont force tab expansion in python
+let g:python_recommended_style = 0
